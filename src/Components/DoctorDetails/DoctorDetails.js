@@ -4,6 +4,7 @@ import DoctorImage from '../../images/doctor-03.jpg';
 
 import RoomIcon from '@material-ui/icons/Room';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
+import DoctorsMainTabs from '../DoctorDetailsTabs/DoctorsMainTabs';
 
 const DoctorDetails = () => {
     return (
@@ -72,20 +73,21 @@ const DoctorDetails = () => {
                         <p>$100 per hour</p>
                     </div>
                     <div className="d-flex p-3 m-2 border">
-                    <RoomIcon />
-                    <RoomIcon />
-                    <RoomIcon />
-                    <RoomIcon />
+                        <RoomIcon />
+                        <RoomIcon />
+                        <RoomIcon />
+                        <RoomIcon />
                     </div>
-                    <button className="btn btn-primary">Book Appointment</button>
+                    <button className="btn btn-primary btn-lg">Book Appointment</button>
                 </div>
-
-
 
             </div>
 
 
-            {/* </container> */}
+            {/* Tabs Components */}
+            <div className="border container mt-5">
+                <DoctorsMainTabs></DoctorsMainTabs>
+            </div>
         </main>
     );
 };
