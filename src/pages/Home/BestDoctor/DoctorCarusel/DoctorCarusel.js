@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Button, Container, Grid, Rating, Typography } from '@mui/material';
+import {Link} from 'react-router-dom';
 
 import RoomIcon from '@material-ui/icons/Room';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
@@ -17,6 +18,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 // import required modules
 import { FreeMode, Navigation } from "swiper";
+import { NavLink } from 'react-router-dom';
 
 const doctorinfo = [
     {
@@ -159,7 +161,9 @@ export default function DoctorCarusel() {
                                                 display: 'flex',
                                                 mt: 1
                                             }}>
-                                                <Button sx={{ m: 1, mx: "auto" }} variant="outlined" size="small">View Profile</Button>
+                                                <Button sx={{ m: 1, mx: "auto" }} variant="outlined" size="small">
+                                                    <Link to="/doctordetails">View Profile</Link>
+                                                </Button>
                                                 <Button sx={{ m: 1, mx: "auto" }} variant="contained" size="small">Book Now</Button>
 
                                             </Box>

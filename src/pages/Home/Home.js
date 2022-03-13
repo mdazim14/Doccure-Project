@@ -15,7 +15,7 @@ import Footer from '../Shared/Footer/Footer';
 const Home = () => {
     return (
         <div>
-            <Headers></Headers>
+            
             {/* <HeadersDropdown></HeadersDropdown> */}
 
             <Banner></Banner>
