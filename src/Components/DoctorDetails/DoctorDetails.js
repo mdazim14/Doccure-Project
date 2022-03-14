@@ -8,7 +8,7 @@ import DoctorsMainTabs from '../DoctorDetailsTabs/DoctorsMainTabs';
 
 const DoctorDetails = () => {
     return (
-        <main className="">
+        <main style={{ backgroundColor: '#F8F9FA' }}>
             <div className="text-start p-3 text-white ps-5 fw-bold bg-primary">
                 <div>
                     <p>Home / Doctor Profile</p>
@@ -16,10 +16,9 @@ const DoctorDetails = () => {
                 <h3>Doctor Profile</h3>
             </div>
 
-
             {/* <container> */}
 
-            <div className="d-flex border mt-4 container m-auto">
+            <div className="d-flex border mt-4 container bg-white m-auto">
 
                 <div className="col-8 text-start p-3 d-flex" >
                     <div className="p-4">
@@ -37,6 +36,7 @@ const DoctorDetails = () => {
                             <RoomIcon />
                             <p>Newyark USA - Get Directions</p>
                         </div>
+
                         <div>
                             <img src="" alt="" />
                             <img src="" alt="" />
