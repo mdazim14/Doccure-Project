@@ -30,7 +30,7 @@ export default function DoctorsMainTabs() {
         <TabPanel sx={{ textAlign: 'left' }} value="1"> <Overview /> </TabPanel>
         <TabPanel sx={{ textAlign: 'left' }} value="2"> <Locations /> </TabPanel>
         <TabPanel sx={{ textAlign: 'left' }} value="3"><Reviews/> </TabPanel>
-        <TabPanel sx={{ textAlign: 'left' }} value="4"><BusinessHours/> </TabPanel>
+        <TabPanel  value="4"> <BusinessHours/> </TabPanel>
       </TabContext>
     </Box>
   );
