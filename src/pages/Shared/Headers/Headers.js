@@ -11,10 +11,14 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import logo from '../../../images/logo.png'
+import logo from '../../../images/logo.png';
+import PersonIcon from '@material-ui/icons/Person';
+
+import { Row, Col } from 'react-bootstrap';
 
 const pages = ['Home', 'Doctors', 'Patients', 'Pharmacy', 'Blogs',];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 const Headers = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -23,6 +27,7 @@ const Headers = () => {
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
+
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
@@ -109,7 +114,9 @@ const Headers = () => {
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                <Avatar alt="User Icon" sx={{ width: 30, height: 30 }} src="/Icons/user.svg" />
+                                 {/* <PersonIcon style={{ fontSize: 40 }}></PersonIcon> */}
+                                <h6 className="p-1" >Sign Up</h6>
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -128,16 +135,43 @@ const Headers = () => {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
+                            <MenuItem>
+                                <Row>
+                                    <Col md={6}>
+                                        <Typography>
+                                            <Button >Sign Up </Button>
+                                        </Typography>
+                                    </Col>
+
+                                    <Col md={6}>
+                                        <Typography>
+                                            <Button >Sign In </Button>
+                                        </Typography>
+                                    </Col>
+                                </Row>
+                            </MenuItem>
+
+                            {
+                                settings.map((setting) => (
+
+                                    < MenuItem key={setting} onClick={handleCloseUserMenu} >
+
+                                        <Typography Typography textAlign="center" >
+                                            {setting}
+                                        </Typography>
+
+                                    </MenuItem>
+                                ))
+                            }
+
+
+
                         </Menu>
+
                     </Box>
                 </Toolbar>
-            </Container>
-        </AppBar>
+            </Container >
+        </AppBar >
     );
 };
 export default Headers;
