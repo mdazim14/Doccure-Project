@@ -5,6 +5,13 @@ import DoctorImage from '../../images/doctor-03.jpg';
 import RoomIcon from '@material-ui/icons/Room';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import DoctorsMainTabs from '../DoctorDetailsTabs/DoctorsMainTabs';
+import GradeIcon from '@mui/icons-material/Grade';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import CallIcon from '@mui/icons-material/Call';
+import VideocamIcon from '@mui/icons-material/Videocam';
+
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 const DoctorDetails = () => {
     return (
@@ -28,11 +35,21 @@ const DoctorDetails = () => {
                         <h2>Dr. Darren Elder</h2>
                         <p>BDS, MDS - Oral & Maxillofacial Surgery</p>
                         <div className="d-flex">
-                            <p>icon</p>
+                            <p><i class="fa-solid fa-tooth"></i></p>
                             <p>Dentist</p>
                         </div>
-                        <p>*****(35)</p>
                         <div className="d-flex">
+                            <div className="text-warning">
+                                <GradeIcon />
+                                <GradeIcon />
+                                <GradeIcon />
+                                <GradeIcon />
+                            </div>
+                            <div style={{ Color: '#E0E0E0' }}>
+                                <GradeIcon />
+                            </div>
+                        </div>
+                        <div className="d-flex mt-2">
                             <RoomIcon />
                             <p>Newyark USA - Get Directions</p>
                         </div>
@@ -52,31 +69,27 @@ const DoctorDetails = () => {
 
                 <div className="border col-4 m-2 text-start p-3">
                     <div className="d-flex">
-                        <RoomIcon />
-                        <p>99%</p>
+                        <ThumbUpIcon className="text-info" />
+                        <p> 99%</p>
                     </div>
 
                     <div className="d-flex">
-                        <RoomIcon />
-                        <p>$100 per hour</p>
-                    </div>
-                    <div className="d-flex">
-                        <RoomIcon />
+                        <ChatBubbleIcon className="text-info" />
                         <p> 35 Feedback</p>
                     </div>
                     <div className="d-flex">
-                        <RoomIcon />
+                        <RoomIcon className="text-info" />
                         <p> Newyork, USA</p>
                     </div>
                     <div className="d-flex">
-                        <LocalAtmIcon />
+                        <LocalAtmIcon className="text-info" />
                         <p>$100 per hour</p>
                     </div>
-                    <div className="d-flex p-3 m-2 border">
-                        <RoomIcon />
-                        <RoomIcon />
-                        <RoomIcon />
-                        <RoomIcon />
+                    <div className="d-flex p-4 fw-bold">
+                        <BookmarkBorderIcon className="text-info border ms-2" />
+                        <ChatBubbleIcon className="text-info border ms-4" />
+                        <CallIcon className="text-info border ms-4" />
+                        <VideocamIcon className="text-info border ms-4" />
                     </div>
                     <button className="btn btn-primary btn-lg">Book Appointment</button>
                 </div>
