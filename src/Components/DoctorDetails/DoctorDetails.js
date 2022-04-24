@@ -66,7 +66,6 @@ const DoctorDetails = () => {
                     </div>
                 </div>
 
-
                 <div className="border col-4 m-2 text-start p-3">
                     <div className="d-flex">
                         <ThumbUpIcon className="text-info" />
