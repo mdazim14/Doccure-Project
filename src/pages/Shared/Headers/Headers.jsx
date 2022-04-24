@@ -12,9 +12,27 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../../../images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-const pages = ["Home", "Doctors", "Patients", "Pharmacy", "Blogs"];
+const pages = [
+  {
+    label: "Home",
+    slug: "/",
+  },
+  {
+    label: "Patients",
+    slug: "/patients",
+  },
+  {
+    label: "Pharmacy",
+    slug: "/pharmacy",
+  },
+  {
+    label: "Blogs",
+    slug: "/blogs",
+  },
+];
+// "Doctors", "Patients", "Pharmacy", "Blogs"
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const settings2 = [
   {
@@ -44,6 +62,7 @@ const settings2 = [
 ];
 
 const Headers = () => {
+  const history = useHistory();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -62,6 +81,11 @@ const Headers = () => {
     setAnchorElUser(null);
   };
 
+  const handleNavigationMenu = (slug) => {
+    handleCloseNavMenu();
+    history.push(slug);
+    console.log(slug);
+  };
   return (
     <AppBar position="static" style={{ background: "#FFFFFF" }}>
       <Container>
@@ -75,7 +99,7 @@ const Headers = () => {
             <img src={logo} alt="" srcset="" />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", sm: "none" } }}>
             <IconButton
               style={{ background: "#a6a4a4" }}
               size="large"
@@ -106,8 +130,11 @@ const Headers = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={page?.label}
+                  onClick={() => handleNavigationMenu(page?.slug)}
+                >
+                  <Typography textAlign="center">{page?.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -124,8 +151,8 @@ const Headers = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page?.label}
+                onClick={() => handleNavigationMenu(page?.slug)}
                 sx={{
                   m: 2,
                   color: "#4a4646",
@@ -133,7 +160,7 @@ const Headers = () => {
                   fontWeight: "bold",
                 }}
               >
-                {page}
+                {page?.label}
               </Button>
             ))}
           </Box>
