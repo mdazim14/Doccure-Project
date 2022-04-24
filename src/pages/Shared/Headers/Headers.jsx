@@ -22,6 +22,10 @@ const settings2 = [
     slug: "/profile",
   },
   {
+    optionName: "Doctors",
+    slug: "/doctors",
+  },
+  {
     optionName: "Account",
     slug: "/account",
   },
