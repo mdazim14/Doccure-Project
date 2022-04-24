@@ -27,6 +27,7 @@ const Routes = () => {
                     <Route path="/doctordetails">
                         <DoctorDetails></DoctorDetails>
                     </Route>
+                    
                 </Switch>
             </Router>
         </div>

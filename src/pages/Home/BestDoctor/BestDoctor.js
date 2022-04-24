@@ -4,7 +4,6 @@ import './BestDoctor.css'
 import DoctorCarusel from './DoctorCarusel/DoctorCarusel';
 
 
-
 const BestDoctor = () => {
 
     return (
