@@ -21,7 +21,7 @@ const pages = [
   },
   {
     label: "Doctors",
-    slug: "/profile-setting",
+    slug: "/doctorsidenav",
   },
   {
     label: "Patients",
@@ -37,7 +37,7 @@ const pages = [
   },
 ];
 // "Doctors", "Patients", "Pharmacy", "Blogs"
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const settings2 = [
   {
     optionName: "Profile",
