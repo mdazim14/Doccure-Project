@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, FormControl, Image, InputGroup} from 'react-bootstrap';
 
-
 const ProfileSetting = () => {
 
     return (
@@ -20,7 +19,6 @@ const ProfileSetting = () => {
                         </div>
                     </div>
                 </div>
-
 
                 <div className="d-flex">
                     <div className="col-md-6">

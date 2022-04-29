@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Card, Col, Image, ListGroup, Row } from "react-bootstrap";
-import { Route } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import { Router } from "react-router-dom";
 import { useHistory } from "react-router-dom";
