@@ -14,5 +14,9 @@ export const profileSideNavData = [{
         slug: '/doctorsidenav/scheduleTiming',
         value: 'Schedule Timings',
     },
+    {
+        slug: '/doctorsidenav/profilesetting',
+        value: 'Profile Setting',
+    },
 
 ];
