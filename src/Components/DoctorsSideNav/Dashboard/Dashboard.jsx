@@ -2,9 +2,10 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 
 const Dashboard = () => {
-  console.log("ok");
+  console.log("Dashboard");
   return (
     <div>
+      <h1>DashBoard</h1>
       <h1>DashBoard</h1>
       <Row>
         <Col xs={10} md={3} className=" m-3 border border-danger">
