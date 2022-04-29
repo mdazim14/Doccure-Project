@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import { Card, Col, Image, ListGroup, Row } from "react-bootstrap";
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import { Router } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components";
+import { profileSideNavData } from "../../utils/profile.constants";
 import Dashboard from "./Dashboard/Dashboard";
 import ProfileSetting from "./ProfileSetting/ProfileSetting";
 
 const DoctorsSideNav = () => {
   const history = useHistory();
-
-  const handleSideNav = (slug) => {
-    history.push(slug);
-    console.log(slug);
+  const [activeMenu, setActiveMenu] = useState("");
+  const handleMenuActive = (slug) => {
+    if (slug === history?.location?.pathname) {
+      setActiveMenu(slug);
+    }
   };
-
   return (
-    <div>
+    <Wrapper>
       <div className="text-start p-3 text-white ps-5 fw-bold bg-primary">
         <div>
-          <small>Home / Doctor Profile</small>
+          <small>Home </small>
         </div>
         <h5>Doctor Profile</h5>
       </div>
@@ -43,36 +46,70 @@ const DoctorsSideNav = () => {
           </Card>
 
           <ListGroup variant="flush" className="text-start ">
-            <Link to="/doctorsidenav/dashboard"> Dashboard</Link>
-            <Link to="/doctorsidenav/appoinments"> Appointments</Link>
-            <Link to="/doctorsidenav/myPatients"> My Patients</Link>
-            <Link to="/doctorsidenav/scheduleTiming"> Schedule Timings</Link>
-            <Link to="/doctorsidenav/invoices"> Invoices</Link>
-            <Link to="/doctorsidenav/reviews"> Reviews</Link>
-            <Link to="/doctorsidenav/profileSetting"> Profile Setting</Link>
-            <Link to="/doctorsidenav/changePassword"> Change Password</Link>
+            {profileSideNavData?.map((el, i) => {
+              return (
+                <button
+                  key={i}
+                  className={`${
+                    el?.slug === history?.location?.pathname ||
+                    el?.slug === activeMenu
+                      ? "activeMenu"
+                      : ""
+                  } LinkButton`}
+                  onClick={() => handleMenuActive(el?.slug)}
+                >
+                  <Link to={el?.slug}>{el?.value}</Link>
+                </button>
+              );
+            })}
           </ListGroup>
         </Col>
 
         <Col xs={12} md={8} className=" mt-3 border border-danger">
-         
-          <ProfileSetting></ProfileSetting>
+          <Switch>
+            <Route path="/doctorsidenav">
+              <Dashboard />
+            </Route>
 
-          {/* <Router> */}
-            {/* <Switch>
-              <Route exact path="/doctorsidenav">
-                <Dashboard></Dashboard>
-              </Route>
-              <Route exact path="/doctorsidenav/dashboard">
-                <Dashboard></Dashboard>
-              </Route>
-            </Switch> */}
-          {/* </Router> */}
-
+            <Route exact path="/doctorsidenav/dashboard">
+              <>{/* <Dashboard /> */}</>
+            </Route>
+            <Route exact path="/doctorsidenav/appoinments">
+              <p>Hello appointments</p>
+            </Route>
+          </Switch>
         </Col>
       </Row>
-    </div>
+    </Wrapper>
   );
 };
 
 export default DoctorsSideNav;
+
+const Wrapper = styled.div`
+  .LinkButton {
+    border: none;
+    text-align: left;
+    margin-bottom: 0;
+    &:hover {
+      background-color: #c2c2c2;
+      .list-group {
+        a {
+          color: #0058f0 !important;
+        }
+      }
+    }
+  }
+  .activeMenu {
+    background-color: #c2c2c2;
+  }
+  .list-group {
+    a {
+      display: inline-block;
+      width: 100%;
+      text-decoration: none;
+      padding: 0.625rem;
+      color: #000000;
+    }
+  }
+`;
