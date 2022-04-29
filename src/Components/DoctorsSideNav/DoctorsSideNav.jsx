@@ -11,6 +11,7 @@ import Dashboard from "./Dashboard/Dashboard";
 import ProfileSetting from "./ProfileSetting/ProfileSetting";
 
 const DoctorsSideNav = () => {
+  console.log("sddasg");
   const history = useHistory();
   const [activeMenu, setActiveMenu] = useState("");
   const handleMenuActive = (slug) => {
