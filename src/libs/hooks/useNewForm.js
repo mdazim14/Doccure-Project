@@ -5,7 +5,7 @@ export const useNewForm = (props) => {
     const { initialValues, initialErrors = {}, validate = null, onCallback } = props;
     const [values, setValues] = useState(initialValues);
     const [errors, setErrors] = useState(initialErrors);
-
+    // 'ok'
     /**
      * Change event handler for `HTMLInputElement` `HTMLSelectElement` `HTMLTextAreaElement`
      * @param e
