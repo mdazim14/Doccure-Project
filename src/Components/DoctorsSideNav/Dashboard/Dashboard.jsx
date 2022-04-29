@@ -57,8 +57,6 @@ const Dashboard = () => {
         <div className="m-5">
           <h3>Patient Appoinment</h3>
         </div>
-
-
 <div>
 <Box sx={{ width: '100%', typography: 'body1', backgroundColor: 'white' }}   >
       <TabContext value={value}>
