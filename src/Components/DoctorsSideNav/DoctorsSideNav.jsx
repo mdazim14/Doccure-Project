@@ -1,20 +1,16 @@
 import React from "react";
 import { Card, Col, Image, ListGroup, Row } from "react-bootstrap";
-import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Switch } from "react-router-dom";
-import { Router } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 import Dashboard from "./Dashboard/Dashboard";
 import ProfileSetting from "./ProfileSetting/ProfileSetting";
 
 const DoctorsSideNav = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
-  const handleSideNav = (slug) => {
-    history.push(slug);
-    console.log(slug);
-  };
+  // const handleSideNav = (slug) => {
+  //   history.push(slug);
+  //   console.log(slug);
+  // };
 
   return (
     <div>
@@ -43,31 +39,22 @@ const DoctorsSideNav = () => {
           </Card>
 
           <ListGroup variant="flush" className="text-start ">
-            <Link to="/doctorsidenav/dashboard"> Dashboard</Link>
-            <Link to="/doctorsidenav/appoinments"> Appointments</Link>
-            <Link to="/doctorsidenav/myPatients"> My Patients</Link>
-            <Link to="/doctorsidenav/scheduleTiming"> Schedule Timings</Link>
-            <Link to="/doctorsidenav/invoices"> Invoices</Link>
-            <Link to="/doctorsidenav/reviews"> Reviews</Link>
-            <Link to="/doctorsidenav/profileSetting"> Profile Setting</Link>
-            <Link to="/doctorsidenav/changePassword"> Change Password</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/dashboard"> Dashboard</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/appoinments"> Appointments</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/myPatients"> My Patients</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/scheduleTiming"> Schedule Timings</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/invoices"> Invoices</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/reviews"> Reviews</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/profileSetting"> Profile Setting</Link>
+            <Link className="text-decoration-none"  to="/doctorsidenav/changePassword"> Change Password</Link>
           </ListGroup>
         </Col>
 
         <Col xs={12} md={8} className=" mt-3 border border-danger">
          
-          <ProfileSetting></ProfileSetting>
+         <Dashboard></Dashboard>
+          {/* <ProfileSetting></ProfileSetting> */}
 
-          {/* <Router> */}
-            {/* <Switch>
-              <Route exact path="/doctorsidenav">
-                <Dashboard></Dashboard>
-              </Route>
-              <Route exact path="/doctorsidenav/dashboard">
-                <Dashboard></Dashboard>
-              </Route>
-            </Switch> */}
-          {/* </Router> */}
 
         </Col>
       </Row>
