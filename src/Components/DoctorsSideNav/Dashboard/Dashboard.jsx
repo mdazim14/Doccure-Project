@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 
 const Dashboard = () => {
+    console.log("Dashboard");
   return (
     <div>
       <h1>DashBoard</h1>
