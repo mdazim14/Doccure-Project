@@ -90,7 +90,6 @@ const ProfileSetting = () => {
                 </div>
             </div>
 
-
             <div>
                 <div className="mt-5 border">
                     <div className="text-start ps-3">
