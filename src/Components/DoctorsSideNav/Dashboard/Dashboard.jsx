@@ -9,12 +9,16 @@ import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const Dashboard = () => {
+<<<<<<< HEAD
   const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+=======
+  console.log("Dashboard");
+>>>>>>> 8ad7a23ec17aff73c3b9922f066fe3070cf2c309
   return (
     <div>
       <h1>DashBoard</h1>
