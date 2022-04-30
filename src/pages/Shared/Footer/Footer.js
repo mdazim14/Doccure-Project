@@ -1,7 +1,7 @@
-import { Box, Container, Divider, Grid, Typography } from '@mui/material';
+import { Box, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
-import footerBG from '../../../images/footer-bg5.jpg'
-import footerLogo from '../../../images/footer-logo.png'
+import footerBG from '../../../images/footer-bg5.jpg';
+import footerLogo from '../../../images/footer-logo.png';
 import { GoLocation } from "react-icons/go";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone, BsFacebook, BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
@@ -16,7 +16,7 @@ const Footer = () => {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
         }}>
-            {/* <Container> */}
+    
             <Box sx={{
                 p: 5,
                 m: 5,
@@ -62,6 +62,7 @@ const Footer = () => {
                             </Box>
                         </Box>
                     </Grid>
+
                     <Grid item xs={12} md={3}>
                         <Typography fontWeight="bold" variant="h5" gutterBottom component="div">
                             Contact US
@@ -102,6 +103,7 @@ const Footer = () => {
                                 doccure@example.com
                             </Typography>
                         </Box>
+
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <Typography fontWeight="bold" variant="h5" gutterBottom component="div">
@@ -123,6 +125,7 @@ const Footer = () => {
                             Patient Dashboard
                         </Typography>
                     </Grid>
+
                     <Grid item xs={12} md={3}>
                         <Typography fontWeight="bold" variant="h5" gutterBottom component="div">
                             For Doctors

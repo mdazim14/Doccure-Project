@@ -59,13 +59,13 @@ const DoctorDetails = () => {
                             <img src="" alt="" />
                             <img src="" alt="" />
                         </div>
+                        
                         <div className="">
                             <button class="btn btn-primary me-3">Dental Filling</button>
                             <button class="btn btn-primary">Teeth Whitneing</button>
                         </div>
                     </div>
                 </div>
-
 
                 <div className="border col-4 m-2 text-start p-3">
                     <div className="d-flex">

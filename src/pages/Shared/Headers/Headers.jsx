@@ -20,6 +20,10 @@ const pages = [
     slug: "/",
   },
   {
+    label: "Doctors",
+    slug: "/doctorsidenav/dashboard",
+  },
+  {
     label: "Patients",
     slug: "/patients",
   },
@@ -33,11 +37,15 @@ const pages = [
   },
 ];
 // "Doctors", "Patients", "Pharmacy", "Blogs"
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const settings2 = [
   {
     optionName: "Profile",
     slug: "/profile",
+  },
+  {
+    optionName: "Doctors",
+    slug: "/doctors",
   },
   {
     optionName: "Account",
@@ -82,6 +90,7 @@ const Headers = () => {
     history.push(slug);
     console.log(slug);
   };
+
   return (
     <AppBar position="static" style={{ background: "#FFFFFF" }}>
       <Container>

@@ -1,14 +1,15 @@
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
-import Home from "./pages/Home/Home";
 import DoctorDetails from "./Components/DoctorDetails/DoctorDetails";
 import Headers from "./pages/Shared/Headers/Headers";
+import DoctorsSideNav from "./Components/DoctorsSideNav/DoctorsSideNav";
+import Home from "./pages/Home/Home";
 
 const Routes = () => {
   return (
-    <Router>
+    <>
       <Headers></Headers>
       <Switch>
         <Route exact path="/">
@@ -18,13 +19,16 @@ const Routes = () => {
           <Home></Home>
         </Route>
         <Route path="/doctordetails">
-          <DoctorDetails></DoctorDetails>
+          <DoctorDetails />
         </Route>
         <Route path="/patients">
           <h1>Patients</h1>
         </Route>
+        <Route path="/doctorsidenav">
+          <DoctorsSideNav />
+        </Route>
       </Switch>
-    </Router>
+    </>
   );
 };
 
