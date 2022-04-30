@@ -6,6 +6,7 @@ import DoctorDetails from "./Components/DoctorDetails/DoctorDetails";
 import Headers from "./pages/Shared/Headers/Headers";
 import DoctorsSideNav from "./Components/DoctorsSideNav/DoctorsSideNav";
 import Home from "./pages/Home/Home";
+import { Login } from "./pages/Auth";
 
 const Routes = () => {
   return (
@@ -17,6 +18,9 @@ const Routes = () => {
         </Route>
         <Route path="/home">
           <Home></Home>
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/doctordetails">
           <DoctorDetails />
