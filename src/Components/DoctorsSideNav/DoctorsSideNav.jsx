@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 import { Card, Col, Image, ListGroup, Row } from "react-bootstrap";
 import { Link, Route } from "react-router-dom";
 import { Switch } from "react-router-dom";
-import { Router } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { profileSideNavData } from "../../utils/profile.constants";
@@ -19,6 +17,7 @@ const DoctorsSideNav = () => {
       setActiveMenu(slug);
     }
   };
+
   return (
     <Wrapper>
       <div className="text-start p-3 text-white ps-5 fw-bold bg-primary">
@@ -76,8 +75,13 @@ const DoctorsSideNav = () => {
                 <Dashboard />
               </>
             </Route>
+
             <Route exact path="/doctorsidenav/appoinments">
               <p>Hello appointments</p>
+            </Route>
+
+            <Route exact path="/doctorsidenav/profilesetting">
+              <ProfileSetting></ProfileSetting>
             </Route>
           </Switch>
         </Col>
