@@ -67,12 +67,14 @@ const DoctorsSideNav = () => {
 
         <Col xs={12} md={8} className=" mt-3 border border-danger">
           <Switch>
-            <Route path="/doctorsidenav">
+            <Route exact path="/doctorsidenav">
               <Dashboard />
             </Route>
 
             <Route exact path="/doctorsidenav/dashboard">
-              <>{/* <Dashboard /> */}</>
+              <>
+                <Dashboard />
+              </>
             </Route>
             <Route exact path="/doctorsidenav/appoinments">
               <p>Hello appointments</p>
