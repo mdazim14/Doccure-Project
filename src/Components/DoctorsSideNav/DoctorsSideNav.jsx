@@ -26,7 +26,7 @@ const DoctorsSideNav = () => {
         <h5>Doctor Profile</h5>
       </div>
 
-      <Row>
+      <Row className="w-100 mx-auto">
         <Col xs={10} md={3} className=" m-3 border border-warning">
           <Card>
             <div className=" text-center img-rounded">

@@ -7,6 +7,9 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import ProgressBar from "./ProgressBar";
+import TabsList from "./TabsList";
+import TabContent from "./TabContent";
 
 const Dashboard = () => {
   const [value, setValue] = React.useState("1");
@@ -16,6 +19,7 @@ const Dashboard = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div>
       <h1>DashBoard</h1>
       <Row>
@@ -198,6 +202,32 @@ const Dashboard = () => {
           </Box>
         </div>
       </Row>
+=======
+    <div className="m-3 p-2">
+      <ProgressBar />
+      <div className="mt-5 mb-3">
+        <h3>Patient Appoinment</h3>
+      </div>
+      <div>
+        <Box
+          sx={{
+            width: "100%",
+            typography: "body1",
+            backgroundColor: "white",
+          }}
+        >
+          <TabContext value={value}>
+            <TabsList handleChange={handleChange} />
+            <TabPanel sx={{ textAlign: "left" }} value="1">
+              <TabContent />
+            </TabPanel>
+            <TabPanel sx={{ textAlign: "left" }} value="2">
+              <TabContent />
+            </TabPanel>
+          </TabContext>
+        </Box>
+      </div>
+>>>>>>> babc0f277b50bd891bcfe188b9e4f9b641311e1d
     </div>
   );
 };
