@@ -9,7 +9,6 @@ import Dashboard from "./Dashboard/Dashboard";
 import ProfileSetting from "./ProfileSetting/ProfileSetting";
 
 const DoctorsSideNav = () => {
-  console.log("sddasg");
   const history = useHistory();
   const [activeMenu, setActiveMenu] = useState("");
   const handleMenuActive = (slug) => {
@@ -66,15 +65,13 @@ const DoctorsSideNav = () => {
 
         <Col xs={12} md={8} className=" mt-3 border border-danger">
           <Switch>
-            <Route exact path="/doctorsidenav">
-              <Dashboard />
-            </Route>
-
             <Route exact path="/doctorsidenav/dashboard">
-              <><Dashboard /></>
+              <>
+                <Dashboard />
+              </>
             </Route>
 
-            <Route exact  path="/doctorsidenav/appoinments">
+            <Route exact path="/doctorsidenav/appoinments">
               <p>Hello appointments</p>
             </Route>
 

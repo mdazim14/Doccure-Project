@@ -21,7 +21,7 @@ const pages = [
   },
   {
     label: "Doctors",
-    slug: "/doctorsidenav",
+    slug: "/doctorsidenav/dashboard",
   },
   {
     label: "Patients",
@@ -90,7 +90,7 @@ const Headers = () => {
     history.push(slug);
     console.log(slug);
   };
-  
+
   return (
     <AppBar position="static" style={{ background: "#FFFFFF" }}>
       <Container>
