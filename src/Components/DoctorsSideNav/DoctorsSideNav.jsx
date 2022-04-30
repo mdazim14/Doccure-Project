@@ -5,6 +5,7 @@ import { Switch } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { profileSideNavData } from "../../utils/profile.constants";
+import Appoinment from "./Appoinments/Appoinment";
 import Dashboard from "./Dashboard/Dashboard";
 import ProfileSetting from "./ProfileSetting/ProfileSetting";
 
@@ -70,13 +71,12 @@ const DoctorsSideNav = () => {
                 <Dashboard />
               </>
             </Route>
-
-            <Route exact path="/doctorsidenav/appoinments">
-              <p>Hello appointments</p>
-            </Route>
-
             <Route exact path="/doctorsidenav/profilesetting">
               <ProfileSetting></ProfileSetting>
+            </Route>
+
+            <Route exact path="/doctorsidenav/appoinments">
+              <Appoinment></Appoinment>
             </Route>
           </Switch>
         </Col>
