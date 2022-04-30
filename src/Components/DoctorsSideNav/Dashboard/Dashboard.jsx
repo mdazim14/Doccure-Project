@@ -24,8 +24,8 @@ const Dashboard = () => {
             <div style={{ width: 100 }}>
               <CircularProgressbar
                 styles={buildStyles({
-                //   pathColor: `rgba(60, 242, 80, 1)`
-                  pathColor: `rgba(53, 5, 189, 1)`                  
+                  //   pathColor: `rgba(60, 242, 80, 1)`
+                  pathColor: `rgba(53, 5, 189, 1)`,
                 })}
                 value={32}
               />
@@ -41,11 +41,12 @@ const Dashboard = () => {
         <Col className="border p-3 d-flex">
           <div className="d-flex align-items-center justify-content-center">
             <div style={{ width: 100, color: "red" }}>
-              <CircularProgressbar 
-               styles={buildStyles({
-                  pathColor: `rgba(60, 242, 80, 1)`                
+              <CircularProgressbar
+                styles={buildStyles({
+                  pathColor: `rgba(60, 242, 80, 1)`,
                 })}
-              value={86} />
+                value={86}
+              />
             </div>
           </div>
           <div className="ms-4">
@@ -58,11 +59,12 @@ const Dashboard = () => {
         <Col className="border p-3 d-flex">
           <div className="d-flex align-items-center justify-content-center">
             <div style={{ width: 100, color: "red" }}>
-              <CircularProgressbar 
-               styles={buildStyles({
-                pathColor: `#ec8a12`                
-              })}
-              value={51} />
+              <CircularProgressbar
+                styles={buildStyles({
+                  pathColor: `#ec8a12`,
+                })}
+                value={51}
+              />
             </div>
           </div>
           <div className="ms-4">
@@ -116,15 +118,263 @@ const Dashboard = () => {
                   />
                 </TabList>
               </Box>
+
               <TabPanel sx={{ textAlign: "left" }} value="1">
                 {" "}
-                Tabs Upcoming{" "}
+                <Row className="d-flex fw-bold m-2 p-3">
+                  <Col md={2}>Patient Name</Col>
+                  <Col md={2}>Appt Date</Col>
+                  <Col md={2}>Purpose</Col>
+                  <Col md={2}>Type</Col>
+                  <Col md={2}>Paid Amount</Col>
+                </Row>
+
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col md={3} className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>{" "}
               </TabPanel>
               <TabPanel sx={{ textAlign: "left" }} value="2">
                 {" "}
-                Tabs Today{" "}
+                <Row className="d-flex fw-bold">
+                  <Col>Patient Name</Col>
+                  <Col>Appt Date</Col>
+                  <Col>Purpose</Col>
+                  <Col>Type</Col>
+                  <Col>Paid Amount</Col>
+                  <Col></Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center border m-1 p-3">
+                  <Col className=" d-flex ">
+                    <p className="p-3">image</p>
+                    <div>
+                      <h6>Richard WIlson</h6>
+                      <small>#PT0016</small>
+                    </div>
+                  </Col>
+                  <Col>
+                    <p>11 NOV 2022</p>
+                    <small className="text-info">10.10 AM</small>
+                  </Col>
+                  <Col>General</Col>
+                  <Col>New Patient</Col>
+                  <Col>Paid Amount</Col>
+                  <Col>$150</Col>
+                  <Col className="d-flex justify-content-center align-items-center">
+                    <div className="d-flex p-2 ">
+                      <p className="text-info p-2">View</p>
+
+                      <p className="text-info p-2">Accept</p>
+
+                      <p className="text-danger p-2">Cancel</p>
+                    </div>
+                  </Col>
+                </Row>
               </TabPanel>
-              <TabPanel value="4"> Tabs </TabPanel>
             </TabContext>
           </Box>
         </div>
