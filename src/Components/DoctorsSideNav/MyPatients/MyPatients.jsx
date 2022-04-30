@@ -67,11 +67,10 @@ const patientsData = [
 
 const MyPatients = () => {
   return (
-    <div className="d-flex">
-
+    <Row>
       {patientsData.map((el, i) => {
         return (
-          <div>
+          <Col md={3}>
             <Card
               style={{
                 width: "18rem",
@@ -108,10 +107,10 @@ const MyPatients = () => {
                 </Row>
               </ListGroup>
             </Card>
-          </div>
+          </Col>
         );
       })}
-    </div>
+    </Row>
   );
 };
 
