@@ -10,6 +10,7 @@ import Dashboard from "./Dashboard/Dashboard";
 import ProfileSetting from "./ProfileSetting/ProfileSetting";
 import MyPatients from "./MyPatients/MyPatients";
 import Invoice from "./Invoice/Invoice";
+import ScheduleTiming from "./Schedule Timings/ScheduleTiming";
 
 const DoctorsSideNav = () => {
   const history = useHistory();
@@ -84,6 +85,10 @@ const DoctorsSideNav = () => {
 
             <Route exact path="/doctorsidenav/myPatients">
               <MyPatients></MyPatients>
+            </Route>
+
+            <Route exact path="/doctorsidenav/scheduleTiming">
+              <ScheduleTiming></ScheduleTiming>
             </Route>
 
             <Route exact path="/doctorsidenav/invoice">
